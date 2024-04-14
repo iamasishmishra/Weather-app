@@ -1,1 +1,1 @@
-# Weather-app
+# Weather-app - tech stack ---> Html, Css, Js
