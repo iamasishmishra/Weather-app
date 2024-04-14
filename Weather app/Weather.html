@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .weather {
+            background: url('bg.jpg');
+            height: 100vh;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .allcontent {
+            border: none;
+            border-radius: 9px;
+            height: 625px;
+            width: 400px;
+            margin-left: 34%;
+            position: relative;
+            top: 3%;
+            background: linear-gradient(rgba(0, 0, 0, 0.600), rgba(0,0,0,0.600))
+            ,url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .search input {
+            background: transparent;
+            height: 30px;
+            width: 340px;
+            margin: 0px 30px;
+            background-color: #3d3d3d;
+            border: none;
+            border-radius: 14px;
+            text-indent: 50px;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .search input::placeholder {
+            padding-left: 6px;
+            color: rgb(138, 137, 137);
+        }
+
+        .search img {
+            position: relative;
+            top: 30px;
+            left: 44px;
+        }
+
+        .innercontent {
+            height: 490px;
+            width: 335px;
+            border: none;
+            border-radius: 9px;
+            margin-left: 32px;
+            margin-top: 10px;
+            background: linear-gradient(rgba(0, 0, 0, 0.500), rgba(0,0,0,0.500)),url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .innercontent p{
+            color: white;
+            text-align: center;
+        }
+
+        .innercontent #p1{
+            font-size: 55px;
+            position: relative;
+            top: 40px;
+            left: 5px;
+            /* height: 20px; */
+        }
+
+        .innercontent #p2{
+            font-size: 19px;
+            position: relative;
+            top: 40px;
+        }
+
+        .innercontent #p3{
+            font-size: 12px;
+            position: relative;
+            top: 75px;
+            padding: 0px 15px;
+        }
+
+        .innercontent .cards{
+            margin-top: 130px;
+            
+        }
+
+        .innercontent .card1{
+            height: 100px;
+            width: 140px;
+            margin: 0px 10px;
+            border: none;
+            border-radius: 9px;
+            background: linear-gradient(rgba(0, 0, 0, 0.800), rgba(0,0,0,0.900)),url(bg.jpg);
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .firstcard{
+            display: flex;
+            justify-content: center;
+        }
+
+        .secondcard{
+            display: flex;
+            justify-content: center;
+            margin-top: 17px;
+        }
+
+        .card1 #p4{
+            color: gray;
+            margin: 9px 16px;
+            font-size: 10px;
+            text-align: left;
+        }
+
+        .card1 #p5{
+            font-size: 23px;
+            text-align: left;
+            margin-left: 14px;
+            position: relative;
+            bottom: 5px;
+        }
+
+        .cards #p6{
+            font-size: 11px;
+            margin-top: 10px;
+            color: gray;
+        }
+
+        .btn button{
+            margin-left: 140px;
+            height: 35px;
+            width: 120px;
+            background-color: transparent;
+            color: white;
+            border: 2px solid rgb(73, 72, 72);
+            border-radius: 19px;          
+        }
+
+        .btn button:hover{
+            background-color: rgb(67, 67, 67);       
+        }
+    </style>
+</head>
+
+<body>
+    <div class="weather" id="cont">
+
+        <div class="allcontent">
+
+            <div class="search">
+                <img src="icon2.png" alt="" height="21px" width="23px">
+                <input type="text" placeholder="enter a city name" id="searchValue">
+            </div>
+
+            <div class="btn">
+                <button onclick="search()">Search</button>
+            </div>
+
+            <div class="innercontent">
+
+                <p id="p1">28°</p>
+
+                <p id="p2">City Name</p>
+
+                <p id="p3">Country</p>
+
+                <div class="cards">
+                    <div class="firstcard">
+                        <div class="card1">
+
+                            <p id="p4">MAX TEMP</p>
+
+                            <p id="p5">30°</p>
+
+                            <p id="p6">Humidity is making it feel warmer</p>
+                        </div>
+    
+                        <div class="card1">
+
+                            <p id="p4">MIN TEMP</p>
+
+                            <p id="p7">2.3''</p>
+
+                            <p id="p6">2'' expexted in next 24h</p>
+    
+                        </div>
+                    </div>
+
+                    <div class="secondcard">
+                        <div class="card1">
+                            <p id="p4">PRESSURE</p>
+
+                            <p id="p8">6 mi</p>
+                        </div>
+    
+                        <div class="card1">
+                            <p id="p4">HUMIDITY</p>
+
+                            <p id="p9">82%</p>
+
+                            <p id="p6">The dew point is 25° right now</p>
+    
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <script src="Weather.js"></script>
+</body>
+
+</html>
